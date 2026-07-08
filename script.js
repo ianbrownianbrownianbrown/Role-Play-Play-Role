@@ -3,7 +3,7 @@ const result = document.querySelector("#result");
 const resultLabel = document.querySelector("#result-label");
 const page = document.body;
 const chillOverlay = document.querySelector("#chill-overlay");
-const logoFaceButton = document.querySelector("#logo-face-button");
+const logoFaceHitbox = document.querySelector("#logo-face-hitbox");
 const logoWhisper = document.querySelector("#logo-whisper");
 const rapidTapWindowMs = 7000;
 const rapidTapTarget = 20;
@@ -139,7 +139,13 @@ function triggerChillMode() {
   chillOverlay.setAttribute("aria-hidden", "false");
 }
 
-logoFaceButton.addEventListener("click", showLogoWhisper);
+logoFaceHitbox.addEventListener("click", showLogoWhisper);
+logoFaceHitbox.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    showLogoWhisper();
+  }
+});
 
 rollButton.addEventListener("click", () => {
   trackRollTap();

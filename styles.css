@@ -185,32 +185,23 @@ h1 {
   filter: drop-shadow(0 0 14px rgba(255, 43, 214, 0.44));
 }
 
-.logo-face-button {
+.logo-face-hitbox {
   position: absolute;
   left: 38%;
   top: 24%;
+  z-index: 3;
+  display: block;
   width: 42%;
   min-width: 44px;
   aspect-ratio: 1;
-  padding: 0;
-  border: 0;
   border-radius: 50%;
-  background: transparent;
-  color: transparent;
-  box-shadow: none;
   cursor: pointer;
+  outline: 0;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.logo-face-button:hover {
-  background: transparent;
-}
-
-.logo-face-button:active {
-  transform: none;
-  box-shadow: none;
-}
-
-.logo-face-button:focus-visible {
+.logo-face-hitbox:focus-visible {
   outline: 2px solid var(--neon-orange-hot);
   outline-offset: 2px;
 }
