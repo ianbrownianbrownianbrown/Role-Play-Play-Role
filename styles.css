@@ -174,60 +174,40 @@ h1 {
   position: relative;
   width: min(150px, 54vw);
   margin: 28px auto 18px;
-}
-
-.rapid-fire-logo {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  opacity: 0.76;
-  filter: drop-shadow(0 0 14px rgba(255, 43, 214, 0.44));
-}
-
-.logo-face-hitbox {
-  position: absolute;
-  left: 38%;
-  top: 24%;
-  z-index: 3;
-  display: block;
-  width: 42%;
-  min-width: 44px;
-  aspect-ratio: 1;
-  border-radius: 50%;
   cursor: pointer;
   outline: 0;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 
-.logo-face-hitbox:focus-visible {
+.logo-easter-egg:focus-visible {
   outline: 2px solid var(--neon-orange-hot);
-  outline-offset: 2px;
+  outline-offset: 4px;
 }
 
 .logo-whisper {
   position: absolute;
-  left: 72%;
-  top: 53%;
+  left: 54%;
+  top: 52%;
   z-index: 2;
-  width: max-content;
-  max-width: min(210px, 68vw);
-  padding: 6px 9px;
+  width: calc(100% - 18px);
+  max-width: calc(100% - 18px);
+  padding: 5px 7px;
   border: 1px solid rgba(255, 176, 0, 0.8);
   border-radius: 8px;
   background: rgba(9, 7, 13, 0.88);
   color: var(--neon-orange-hot);
-  font-size: 0.86rem;
+  font-size: clamp(0.68rem, 2.8vw, 0.82rem);
   font-weight: 900;
   line-height: 1.1;
   opacity: 0;
+  overflow-wrap: anywhere;
   pointer-events: none;
-  text-align: left;
+  text-align: center;
   text-shadow:
     0 0 8px rgba(255, 176, 0, 0.94),
     0 0 18px rgba(255, 122, 0, 0.82);
-  transform: translate(6px, -50%) scale(0.94);
+  transform: translate(-50%, -50%) scale(0.94);
 }
 
 .logo-whisper.is-visible {
@@ -368,22 +348,22 @@ body.chill-mode .chill-overlay {
 @keyframes logo-whisper-pop {
   0% {
     opacity: 0;
-    transform: translate(2px, -50%) scale(0.86);
+    transform: translate(-50%, -50%) scale(0.86);
   }
 
   12% {
     opacity: 1;
-    transform: translate(10px, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
 
   82% {
     opacity: 1;
-    transform: translate(10px, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
 
   100% {
     opacity: 0;
-    transform: translate(14px, -50%) scale(0.96);
+    transform: translate(-50%, -50%) scale(0.96);
   }
 }
 
