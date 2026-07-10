@@ -185,6 +185,15 @@ h1 {
   outline-offset: 4px;
 }
 
+.rapid-fire-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.76;
+  filter: drop-shadow(0 0 14px rgba(255, 43, 214, 0.44));
+}
+
 .logo-whisper {
   position: absolute;
   left: 72%;
